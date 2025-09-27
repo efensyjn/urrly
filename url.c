@@ -17,7 +17,7 @@ void freeUrls(urlData *urls) {
 }
 
 int makeId(urlData *urls, char* url_) {
-  return urls->length + 1000; 
+  return urls->length * 1000 + urls->length *10; 
 }
 
 char* urlFromId(urlData *urls, int id) {
