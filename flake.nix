@@ -25,7 +25,8 @@
           runHook preBuild
           
           gcc -c baseutils.c
-          gcc -o urrly main.c baseutils.o -lm
+          gcc -c url.c
+          gcc -o urrly main.c baseutils.o url.o -lm
 
           runHook postBuild
         '';
