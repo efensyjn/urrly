@@ -19,14 +19,15 @@
 
         nativeBuildInputs = with pkgs; [ libgcc ];
 
-        buildInputs = with pkgs; [];
+        buildInputs = with pkgs; [ zlib ];
 
         buildPhase = ''
           runHook preBuild
           
           gcc -c baseutils.c
           gcc -c url.c
-          gcc -o urrly main.c baseutils.o url.o -lm
+          gcc -c backe.c
+          gcc -o urrly main.c baseutils.o url.o backe.o -lm
 
           runHook postBuild
         '';
